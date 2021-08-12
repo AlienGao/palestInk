@@ -42,6 +42,14 @@ module.exports = [
     ],
   },
   {
+    text: "面试",
+    link: "/interview/",
+    // items: [
+      // { text: "面试汇总", link: "/pages/1056dd/" },
+      // { text: '博客搭建', },
+    // ],
+  },
+  {
     text: "收藏",
     link: "/pages/beb6c0bd8a66cea6/",
     // items: [
