@@ -30,6 +30,7 @@ module.exports = [
     items: [
       { text: "贪心", link: "/leetcode/greed/" },
       { text: "广度优先/深度优先", link: "/leetcode/dfs/" },
+      { text: "位运算", link: "/leetcode/bit/" },
     ],
   },
   {
