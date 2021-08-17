@@ -20,7 +20,13 @@ git commit -m 'deploy'
 # git push -f git@github.com:AlienGao/AlienGao.github.io.git master
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:AlienGao/palestInk.git master:gh-pages
+git push -f git@github.com:AlienGao/palestInk.git master:master
 
 cd -
 rm -rf docs/.vuepress/dist
+
+git init
+git add -A
+git commit -m 'deploy'
+
+git push
