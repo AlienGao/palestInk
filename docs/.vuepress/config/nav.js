@@ -9,14 +9,14 @@ module.exports = [
       { text: "JavaScript", link: "/frontend/js/" },
       { text: "Antd组件", link: "/frontend/component/" },
       // { text: 'Vue', link: '/pages/5d463fbdb172d43b/' },
-      // {
-      //   text: "学习笔记",
-      //   items: [
-      //     { text: "《ES6 教程》笔记", link: "/note/es6/" },
-      //     { text: "《Vue》笔记", link: "/note/vue/" },
-      //     { text: "《React》笔记", link: "/note/react/" },
-      //   ],
-      // },
+      {
+        text: "学习笔记",
+        items: [
+          { text: "《ES6 教程》笔记", link: "/note/es6/" },
+          // { text: "《Vue》笔记", link: "/note/vue/" },
+          // { text: "《React》笔记", link: "/note/react/" },
+        ],
+      },
     ],
   },
   {

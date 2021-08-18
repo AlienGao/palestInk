@@ -25,8 +25,7 @@ git push -f git@github.com:AlienGao/palestInk.git master:master
 cd -
 rm -rf docs/.vuepress/dist
 
-git init
 git add -A
 git commit -m 'deploy'
 
-git push
+git push -f git@github.com:AlienGao/palestInk.git master:master
