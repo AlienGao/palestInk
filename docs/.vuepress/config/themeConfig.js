@@ -1,5 +1,5 @@
 const nav = require('./nav.js');
-// const htmlModules = require('./htmlModules.js');
+const htmlModules = require('./htmlModules.js');
 // const sidebar = require('./sidebar.js');
 
 // 主题配置
@@ -83,5 +83,5 @@ module.exports = {
     copyrightInfo:
       'AlienGao | <a href="https://github.com/AlienGao/palestInk" target="_blank">MIT License</a>', // 博客版权信息，支持a标签
   },
-  // htmlModules // 插入hmtl(广告)模块
+  htmlModules // 插入hmtl(广告)模块
 }
