@@ -75,6 +75,11 @@ module.exports = {
         title: '听音乐',
         link: 'https://music.163.com/#/playlist?id=136527094',
       },
+      {
+        iconClass: 'icon-rss',
+        title: 'Rss訂閲',
+        link: 'http://www.feed43.com/0430557253077070.xml'
+      }
     ],
   },
   footer: {
