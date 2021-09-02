@@ -17,11 +17,3 @@ git(path)
   .checkout("master", () => {
     console.log("Finish public, back to branch master.");
   });
-
-git()
-  .add("./*")
-  .commit("deploy")
-  .addRemote("origin", repo)
-  .push(["-f", "origin", "master"], () => {
-    console.log("Push to master success");
-  });
