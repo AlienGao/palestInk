@@ -7,13 +7,21 @@ git(path)
   .add("./*")
   .commit("public")
   .addRemote("origin", repo)
-  .push(["-f", "origin", "master"], () => {
-    console.log("Push to master success");
-  })
+  // .push(["-f", "origin", "master"], () => {
+  //   console.log("Push to master success");
+  // })
   .checkoutLocalBranch("gh-pages", () => {
     console.log("Checkout to branch gh-pages");
   })
   .push(["-f", "origin", "gh-pages"])
   .checkout("master", () => {
     console.log("Finish public, back to branch master.");
+  });
+
+git()
+  .add("./*")
+  .commit("deploy")
+  .addRemote("origin", repo)
+  .push(["-f", "origin", "master"], () => {
+    console.log("Push to master success");
   });
