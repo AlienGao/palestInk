@@ -22,10 +22,10 @@ set -e
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:AlienGao/palestInk.git master:gh-pages
 
-# cd -
-# rm -rf docs/.vuepress/dist
-
 git add -A
 git commit -m 'deploy'
 
 git push -f git@github.com:AlienGao/palestInk.git master:master
+
+cd -
+rm -rf docs/.vuepress/dist

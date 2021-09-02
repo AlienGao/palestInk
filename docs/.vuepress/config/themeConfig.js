@@ -78,7 +78,7 @@ module.exports = {
       {
         iconClass: 'icon-rss',
         title: 'Rss訂閲',
-        link: 'http://www.feed43.com/0430557253077070.xml'
+        link: 'http://fetchrss.com/rss/613062592c5fdd6e6e18871261304431c153185fd815c472.xml'
       }
     ],
   },
