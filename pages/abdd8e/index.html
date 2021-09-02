@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Promise | AlienGao&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/palestInk/img/favicon.ico">
+    <script data-ad-client="ca-pub-7828333725993554" async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="description" content="web前端技术博客,简洁至上,专注web前端学习与总结。JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github等技术文章。">
+    <meta name="keywords" content="前端博客,个人技术博客,前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github,markdown">
+    <meta name="baidu-site-verification" content="7F55weZDDc">
+    <meta name="theme-color" content="#11a8cd">
+    <link rel="preload" href="/palestInk/assets/css/0.styles.071828ce.css" as="style"><link rel="preload" href="/palestInk/assets/js/app.f3362844.js" as="script"><link rel="preload" href="/palestInk/assets/js/2.1ca628e9.js" as="script"><link rel="preload" href="/palestInk/assets/js/29.c964af7c.js" as="script"><link rel="prefetch" href="/palestInk/assets/js/10.e6a541e8.js"><link rel="prefetch" href="/palestInk/assets/js/11.328b0f28.js"><link rel="prefetch" href="/palestInk/assets/js/12.7f78d282.js"><link rel="prefetch" href="/palestInk/assets/js/13.7a676e32.js"><link rel="prefetch" href="/palestInk/assets/js/14.b816e62b.js"><link rel="prefetch" href="/palestInk/assets/js/15.ea812b2d.js"><link rel="prefetch" href="/palestInk/assets/js/16.4c820ae5.js"><link rel="prefetch" href="/palestInk/assets/js/17.307e08b3.js"><link rel="prefetch" href="/palestInk/assets/js/18.c1f19ffe.js"><link rel="prefetch" href="/palestInk/assets/js/19.c84f87b1.js"><link rel="prefetch" href="/palestInk/assets/js/20.90fc94e2.js"><link rel="prefetch" href="/palestInk/assets/js/21.0226ee00.js"><link rel="prefetch" href="/palestInk/assets/js/22.addb3661.js"><link rel="prefetch" href="/palestInk/assets/js/23.54dbd9f1.js"><link rel="prefetch" href="/palestInk/assets/js/24.c42a12fc.js"><link rel="prefetch" href="/palestInk/assets/js/25.a130255c.js"><link rel="prefetch" href="/palestInk/assets/js/26.ef02f4a9.js"><link rel="prefetch" href="/palestInk/assets/js/27.1c906af2.js"><link rel="prefetch" href="/palestInk/assets/js/28.c08bcd3e.js"><link rel="prefetch" href="/palestInk/assets/js/3.417dca46.js"><link rel="prefetch" href="/palestInk/assets/js/30.d35eb335.js"><link rel="prefetch" href="/palestInk/assets/js/31.ab3a8cda.js"><link rel="prefetch" href="/palestInk/assets/js/32.0ffe1db2.js"><link rel="prefetch" href="/palestInk/assets/js/33.69deffb6.js"><link rel="prefetch" href="/palestInk/assets/js/34.08dc3500.js"><link rel="prefetch" href="/palestInk/assets/js/35.19bbb741.js"><link rel="prefetch" href="/palestInk/assets/js/36.94cbc885.js"><link rel="prefetch" href="/palestInk/assets/js/37.1d6c18d6.js"><link rel="prefetch" href="/palestInk/assets/js/38.66d0f396.js"><link rel="prefetch" href="/palestInk/assets/js/39.cb34c602.js"><link rel="prefetch" href="/palestInk/assets/js/4.78209e41.js"><link rel="prefetch" href="/palestInk/assets/js/40.085dc740.js"><link rel="prefetch" href="/palestInk/assets/js/41.5d9bffc3.js"><link rel="prefetch" href="/palestInk/assets/js/42.07cd0a07.js"><link rel="prefetch" href="/palestInk/assets/js/43.b5e252a7.js"><link rel="prefetch" href="/palestInk/assets/js/44.5435fb04.js"><link rel="prefetch" href="/palestInk/assets/js/45.34b8f085.js"><link rel="prefetch" href="/palestInk/assets/js/46.01ffb945.js"><link rel="prefetch" href="/palestInk/assets/js/5.18288151.js"><link rel="prefetch" href="/palestInk/assets/js/6.b75711ca.js"><link rel="prefetch" href="/palestInk/assets/js/7.31a8df10.js"><link rel="prefetch" href="/palestInk/assets/js/8.740fdc49.js"><link rel="prefetch" href="/palestInk/assets/js/9.0bb8f5a2.js">
+    <link rel="stylesheet" href="/palestInk/assets/css/0.styles.071828ce.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/palestInk/" class="home-link router-link-active"><img src="/palestInk/img/alien.jpeg" alt="AlienGao's blog" class="logo"> <span class="site-name can-hide">AlienGao's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/palestInk/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><a href="/palestInk/web/" class="link-title">前端</a> <span class="title" style="display:none;">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/palestInk/frontend/js/" class="nav-link">JavaScript</a></li><li class="dropdown-item"><!----> <a href="/palestInk/frontend/component/" class="nav-link">Antd组件</a></li><li class="dropdown-item"><h4>学习笔记</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/palestInk/note/es6/" class="nav-link">《ES6 教程》笔记</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法" class="dropdown-title"><a href="/palestInk/leetcode/" class="link-title">算法</a> <span class="title" style="display:none;">算法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/palestInk/leetcode/greed/" class="nav-link">贪心</a></li><li class="dropdown-item"><!----> <a href="/palestInk/leetcode/dfs/" class="nav-link">广度优先/深度优先</a></li><li class="dropdown-item"><!----> <a href="/palestInk/leetcode/bit/" class="nav-link">位运算</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术" class="dropdown-title"><a href="/palestInk/technology/" class="link-title">技术</a> <span class="title" style="display:none;">技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/palestInk/pages/ee319a/" class="nav-link">技术文档</a></li><li class="dropdown-item"><!----> <a href="/palestInk/pages/1e9c2d/" class="nav-link">GitHub技巧</a></li></ul></div></div><div class="nav-item"><a href="/palestInk/interview/" class="nav-link">面试</a></div><div class="nav-item"><a href="/palestInk/pages/beb6c0bd8a66cea6/" class="nav-link">收藏</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/palestInk/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/palestInk/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/palestInk/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/palestInk/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/AlienGao/palestInk" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="https://avatars.githubusercontent.com/u/23427784?v=4"> <div class="blogger-info"><h3>AlienGao</h3> <span></span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/palestInk/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><a href="/palestInk/web/" class="link-title">前端</a> <span class="title" style="display:none;">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/palestInk/frontend/js/" class="nav-link">JavaScript</a></li><li class="dropdown-item"><!----> <a href="/palestInk/frontend/component/" class="nav-link">Antd组件</a></li><li class="dropdown-item"><h4>学习笔记</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/palestInk/note/es6/" class="nav-link">《ES6 教程》笔记</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法" class="dropdown-title"><a href="/palestInk/leetcode/" class="link-title">算法</a> <span class="title" style="display:none;">算法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/palestInk/leetcode/greed/" class="nav-link">贪心</a></li><li class="dropdown-item"><!----> <a href="/palestInk/leetcode/dfs/" class="nav-link">广度优先/深度优先</a></li><li class="dropdown-item"><!----> <a href="/palestInk/leetcode/bit/" class="nav-link">位运算</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术" class="dropdown-title"><a href="/palestInk/technology/" class="link-title">技术</a> <span class="title" style="display:none;">技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/palestInk/pages/ee319a/" class="nav-link">技术文档</a></li><li class="dropdown-item"><!----> <a href="/palestInk/pages/1e9c2d/" class="nav-link">GitHub技巧</a></li></ul></div></div><div class="nav-item"><a href="/palestInk/interview/" class="nav-link">面试</a></div><div class="nav-item"><a href="/palestInk/pages/beb6c0bd8a66cea6/" class="nav-link">收藏</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/palestInk/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/palestInk/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/palestInk/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/palestInk/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/AlienGao/palestInk" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/palestInk/pages/abdd8e/" aria-current="page" class="active sidebar-link">Promise</a><ul class="sidebar-sub-headers"></ul></li></ul> <div class="sidebar-slot sidebar-slot-bottom"><!-- 正方形 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="3508773082"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div></aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-1cd794fe><div class="articleInfo" data-v-1cd794fe><ul class="breadcrumbs" data-v-1cd794fe><li data-v-1cd794fe><a href="/palestInk/" title="首页" class="iconfont icon-home router-link-active" data-v-1cd794fe></a></li> <li data-v-1cd794fe><a href="/palestInk/note/es6/" title="《ES6 教程》笔记-目录页" data-v-1cd794fe>《ES6 教程》笔记</a></li> <!----> <!----></ul> <div class="info" data-v-1cd794fe><div title="作者" class="author iconfont icon-touxiang" data-v-1cd794fe><a href="https://github.com/AlienGao" target="_blank" title="作者" class="beLink" data-v-1cd794fe>AlienGao</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-1cd794fe><a href="javascript:;" data-v-1cd794fe>2021-08-18</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABH1JREFUSA3tVl1oHFUUPmdmd2ltklqbpJDiNnXFmgbFktho7YMPNiJSSZM0+CAYSkUELVhM6YuwIPpgoOKDqOBDC0XE2CQoNtQXBUFTTcCi+Wlh1V2TQExsUzcltd3M9Tt3ZjZzZ2fT+OJTL8yeM+eee757fmeJbq//KQL8X3DUSFOcfr7cRsRtxNQMWueeVzOkaITIGqQHNg5y8+jNW9ldM7A6nTpAjuolUikAwq7CE3WcM2RRDz+XGVgN3FptU/aUSlvq9Pa3iZ1+sgAqJyyAFqkipd9dqiwHF3P65YycLWc/6sqGrvoEoIp6DOFaX5h6+dnfjkWprwqsPk0dUGq5vySwDImC10KxFHgGL1SWoc92O3eVht09qdXNH11I2SsTsJYqMWzihqGMi+A+Garf3BAuuLI5oGlULyNfyB/HYNujwktOfRrMr5t77NmevqaUopx0grnKAyvVpmwUDB4x6FPXuGvYLTDwWsejwgtgkYKPqRJg8SV6xaiZ3ZTppGneS4yfH5/66fZSDHv+QZci/+h5c5UHtpy67JUqGppM0sh0Nc1dW6/N1W5Yoqat8/TU/VnadmdeW2PLLSyh0cvxBs3KbqTmwYPpxN4do/mzE8nEpvX/UMu2Wbp74zUAK5q6WkHns7V0eWkdPbPzd3rxkTGybadYySumVzhcaJFbs5UrEkQ/+CK8gF5dnh/6ciIZ73gwQ927L1IitoxKLXYP3SjYdOrHHfTZhRRlFyrorafPk20B3HPD1y2G3qKZME5Jcf3t/HUC13/8tSd++vqFveMUTwAUxSUFI1QekR1+bIze3D9MF2aq6cPvG72CgnldWCFqyRw3lwH8ZMerjTD9ElRO7Gv44wNpC90aASqGfVlz/Rx17srQ57/UU26hkhQqUB7dBR71WmzQhHUnblGmVOEw0jhbV1n9OlXUDCIRGaNV5Jp43N516fN7JmnTHdfp7Hgy0luO4aMhtkLL8Bi3bUWYvzh5Mn1dTxrL6QmGuRhGL/TiTTxRoEdTszSaq9GR0NGA3KdkOz3hqSV3MIDhQ5IVX/Ivx3umBti2es2h4eZby7x8br1rkf7Mo90AqC8aQ3sJeNzqFRu+vSANAQe3PL7l0HGOAdwDCeZYvNKeoZp1Qfs6Aipndh86HmFRi0LAnEO47wsqM6cdfjh3jBPUzhZy7nvlUfFsamED1VQt6aISHVymXZ/B2aCtIG8AI8xfobj2d3en1wWVhOeHELKmLQ1s211s88comkv4UCwWyF787mJdYXtNfhKAXVqnKTq8QZvGAGGOfaTo5pGZ/PwbUCr5+DPr/1J92JNHr9aOl/F3iI5+O1nfybsGxoimvZ3ViWSluDITw3P37mypheDIPY0tw7+O/5ApbkYw+zpfaUVu32Pi98+defdUhEpZkRFq0aqyNh9FuL9hpYbEm6iwi0z2REd09ZmyENEbuhjDWzKvZXTqKYaBIr3tt5kuPtQBZFvEUwHt60vfCNu41XsksH9Ij1BMMz1Y0OOunHNShFIP5868g5zeXmuLwL9T4b6Q2+KejgAAAABJRU5ErkJggg==">
+          Promise
+        </h1> <div class="page-slot page-slot-top"><!-- 固定100% * 90px可显示，max-height:90px未见显示-->
+     <ins class="adsbygoogle"
+          style="display:inline-block;width:100%;max-height:90px"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="6625304284"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div> <div class="theme-vdoing-content content__default"><h3 id="_1-promise-的含义"><a href="#_1-promise-的含义" class="header-anchor">#</a> 1. Promise 的含义</h3> <p>Promise对象有以下两个特点。</p> <p>（1）对象的状态不受外界影响。Promise对象代表一个异步操作，有三种状态：pending（进行中）、fulfilled（已成功）和rejected（已失败）。只有异步操作的结果，可以决定当前是哪一种状态，任何其他操作都无法改变这个状态。这也是Promise这个名字的由来，它的英语意思就是“承诺”，表示其他手段无法改变。</p> <p>（2）一旦状态改变，就不会再变，任何时候都可以得到这个结果。Promise对象的状态改变，只有两种可能：从pending变为fulfilled和从pending变为rejected。只要这两种情况发生，状态就凝固了，不会再变了，会一直保持这个结果，这时就称为 resolved（已定型）。如果改变已经发生了，你再对Promise对象添加回调函数，也会立即得到这个结果。这与事件（Event）完全不同，事件的特点是，如果你错过了它，再去监听，是得不到结果的。</p> <h3 id="_2-promise-prototype-then"><a href="#_2-promise-prototype-then" class="header-anchor">#</a> 2. Promise.prototype.then()</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>new Promise((resolve, reject) =&gt; {
+  resolve(1);
+  console.log(2);
+}).then(r =&gt; {
+  console.log(r);
+});
+// 2
+// 1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>上面代码中，调用resolve(1)以后，后面的console.log(2)还是会执行，并且会首先打印出来。这是因为立即 resolved 的 Promise 是在本轮事件循环的末尾执行，总是晚于本轮循环的同步任务。</p> <p>一般来说，调用resolve或reject以后，Promise 的使命就完成了，后继操作应该放到then方法里面，而不应该直接写在resolve或reject的后面。所以，最好在它们前面加上return语句，这样就不会有意外。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>new Promise((resolve, reject) =&gt; {
+  return resolve(1);
+  // 后面的语句不会执行
+  console.log(2);
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="_3-promise-prototype-catch"><a href="#_3-promise-prototype-catch" class="header-anchor">#</a> 3. Promise.prototype.catch()</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 写法一
+const promise = new Promise(function(resolve, reject) {
+  try {
+    throw new Error('test');
+  } catch(e) {
+    reject(e);
+  }
+});
+promise.catch(function(error) {
+  console.log(error);
+});
+
+// 写法二
+const promise = new Promise(function(resolve, reject) {
+  reject(new Error('test'));
+});
+promise.catch(function(error) {
+  console.log(error);
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>比较上面两种写法，可以发现reject()方法的作用，等同于抛出错误。</p> <p>如果 Promise 状态已经变成resolved，再抛出错误是无效的。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const promise = new Promise(function(resolve, reject) {
+  resolve('ok');
+  throw new Error('test');
+});
+promise
+  .then(function(value) { console.log(value) })
+  .catch(function(error) { console.log(error) });
+// ok
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>上面代码中，Promise 在resolve语句后面，再抛出错误，不会被捕获，等于没有抛出。因为 Promise 的状态一旦改变，就永久保持该状态，不会再变了。</p> <p>一般来说，不要在then()方法里面定义 Reject 状态的回调函数（即then的第二个参数），总是使用catch方法。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// bad
+promise
+  .then(function(data) {
+    // success
+  }, function(err) {
+    // error
+  });
+
+// good
+promise
+  .then(function(data) { //cb
+    // success
+  })
+  .catch(function(err) {
+    // error
+  });
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p>上面代码中，第二种写法要好于第一种写法，理由是第二种写法可以捕获前面then方法执行中的错误，也更接近同步的写法（try/catch）。因此，建议总是使用catch()方法，而不使用then()方法的第二个参数。</p> <h3 id="_4-promise-prototype-finally"><a href="#_4-promise-prototype-finally" class="header-anchor">#</a> 4. Promise.prototype.finally()</h3> <p>finally()方法用于指定不管 Promise 对象最后状态如何，都会执行的操作。该方法是 ES2018 引入标准的。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>promise
+.then(result =&gt; {···})
+.catch(error =&gt; {···})
+.finally(() =&gt; {···});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>上面代码中，不管promise最后的状态，在执行完then或catch指定的回调函数以后，都会执行finally方法指定的回调函数。</p> <h3 id="_5-promise-all"><a href="#_5-promise-all" class="header-anchor">#</a> 5. Promise.all()</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>const p = Promise.all([p1, p2, p3]);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>p的状态由p1、p2、p3决定，分成两种情况。</p> <p>（1）只有p1、p2、p3的状态都变成fulfilled，p的状态才会变成fulfilled，此时p1、p2、p3的返回值组成一个数组，传递给p的回调函数。</p> <p>（2）只要p1、p2、p3之中有一个被rejected，p的状态就变成rejected，此时第一个被reject的实例的返回值，会传递给p的回调函数。</p> <p>注意，如果作为参数的 Promise 实例，自己定义了catch方法，那么它一旦被rejected，并不会触发Promise.all()的catch方法。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const p1 = new Promise((resolve, reject) =&gt; {
+  resolve('hello');
+})
+.then(result =&gt; result)
+.catch(e =&gt; e);
+
+const p2 = new Promise((resolve, reject) =&gt; {
+  throw new Error('报错了');
+})
+.then(result =&gt; result)
+.catch(e =&gt; e);
+
+Promise.all([p1, p2])
+.then(result =&gt; console.log(result))
+.catch(e =&gt; console.log(e));
+// [&quot;hello&quot;, Error: 报错了]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p>上面代码中，p1会resolved，p2首先会rejected，但是p2有自己的catch方法，该方法返回的是一个新的 Promise 实例，p2指向的实际上是这个实例。该实例执行完catch方法后，也会变成resolved，导致Promise.all()方法参数里面的两个实例都会resolved，因此会调用then方法指定的回调函数，而不会调用catch方法指定的回调函数。</p> <p>如果p2没有自己的catch方法，就会调用Promise.all()的catch方法。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const p1 = new Promise((resolve, reject) =&gt; {
+  resolve('hello');
+})
+.then(result =&gt; result);
+
+const p2 = new Promise((resolve, reject) =&gt; {
+  throw new Error('报错了');
+})
+.then(result =&gt; result);
+
+Promise.all([p1, p2])
+.then(result =&gt; console.log(result))
+.catch(e =&gt; console.log(e));
+// Error: 报错了
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h3 id="_6-promise-race"><a href="#_6-promise-race" class="header-anchor">#</a> 6. Promise.race()</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>const p = Promise.race([p1, p2, p3]);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>上面代码中，只要p1、p2、p3之中有一个实例率先改变状态，p的状态就跟着改变。那个率先改变的 Promise 实例的返回值，就传递给p的回调函数。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const p = Promise.race([
+  fetch('/resource-that-may-take-a-while'),
+  new Promise(function (resolve, reject) {
+    setTimeout(() =&gt; reject(new Error('request timeout')), 5000)
+  })
+]);
+
+p
+.then(console.log)
+.catch(console.error);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>上面代码中，如果 5 秒之内fetch方法无法返回结果，变量p的状态就会变为rejected，从而触发catch方法指定的回调函数。</p> <h3 id="_7-promise-allsettled"><a href="#_7-promise-allsettled" class="header-anchor">#</a> 7. Promise.allSettled()</h3> <p>Promise.allSettled()方法接受一个数组作为参数，数组的每个成员都是一个 Promise 对象，并返回一个新的 Promise 对象。只有等到参数数组的所有 Promise 对象都发生状态变更（不管是fulfilled还是rejected），返回的 Promise 对象才会发生状态变更。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const resolved = Promise.resolve(42);
+const rejected = Promise.reject(-1);
+
+const allSettledPromise = Promise.allSettled([resolved, rejected]);
+
+allSettledPromise.then(function (results) {
+  console.log(results);
+});
+// [
+//    { status: 'fulfilled', value: 42 },
+//    { status: 'rejected', reason: -1 }
+// ]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>上面代码中，Promise.allSettled()的返回值allSettledPromise，状态只可能变成fulfilled。它的回调函数接收到的参数是数组results。该数组的每个成员都是一个对象，对应传入Promise.allSettled()的数组里面的两个 Promise 对象。</p> <p>results的每个成员是一个对象，对象的格式是固定的，对应异步操作的结果。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const promises = [ fetch('index.html'), fetch('https://does-not-exist/') ];
+const results = await Promise.allSettled(promises);
+
+// 过滤出成功的请求
+const successfulPromises = results.filter(p =&gt; p.status === 'fulfilled');
+
+// 过滤出失败的请求，并输出原因
+const errors = results
+  .filter(p =&gt; p.status === 'rejected')
+  .map(p =&gt; p.reason);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h3 id="_8-promise-any"><a href="#_8-promise-any" class="header-anchor">#</a> 8. Promise.any()</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>Promise.any([
+  fetch('https://v8.dev/').then(() =&gt; 'home'),
+  fetch('https://v8.dev/blog').then(() =&gt; 'blog'),
+  fetch('https://v8.dev/docs').then(() =&gt; 'docs')
+]).then((first) =&gt; {  // 只要有一个 fetch() 请求成功
+  console.log(first);
+}).catch((error) =&gt; { // 所有三个 fetch() 全部请求失败
+  console.log(error);
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>Promise.any()抛出的错误，不是一个一般的 Error 错误对象，而是一个 AggregateError 实例。它相当于一个数组，每个成员对应一个被rejected的操作所抛出的错误。下面是 AggregateError 的实现示例。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// new AggregateError() extends Array
+
+const err = new AggregateError();
+err.push(new Error(&quot;first error&quot;));
+err.push(new Error(&quot;second error&quot;));
+// ...
+throw err;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="_9-promise-resolve"><a href="#_9-promise-resolve" class="header-anchor">#</a> 9. Promise.resolve()</h3> <p>有时需要将现有对象转为 Promise 对象，Promise.resolve()方法就起到这个作用。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const jsPromise = Promise.resolve($.ajax('/whatever.json'));
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>Promise.resolve()方法的参数分成四种情况。<br>
+（1）参数是一个 Promise 实例<br>
+如果参数是 Promise 实例，那么Promise.resolve将不做任何修改、原封不动地返回这个实例。<br>
+（2）参数是一个thenable对象<br>
+thenable对象指的是具有then方法的对象，比如下面这个对象。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>let thenable = {
+  then: function(resolve, reject) {
+    resolve(42);
+  }
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>Promise.resolve()方法会将这个对象转为 Promise 对象，然后就立即执行thenable对象的then()方法。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>let thenable = {
+  then: function(resolve, reject) {
+    resolve(42);
+  }
+};
+
+let p1 = Promise.resolve(thenable);
+p1.then(function (value) {
+  console.log(value);  // 42
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>（3）参数不是具有then()方法的对象，或根本就不是对象</p> <p>如果参数是一个原始值，或者是一个不具有then()方法的对象，则Promise.resolve()方法返回一个新的 Promise 对象，状态为resolved。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const p = Promise.resolve('Hello');
+
+p.then(function (s) {
+  console.log(s)
+});
+// Hello
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>（4）不带有任何参数<br>
+Promise.resolve()方法允许调用时不带参数，直接返回一个resolved状态的 Promise 对象。</p> <p>所以，如果希望得到一个 Promise 对象，比较方便的方法就是直接调用Promise.resolve()方法。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const p = Promise.resolve();
+
+p.then(function () {
+  // ...
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>上面代码的变量p就是一个 Promise 对象。</p> <p>需要注意的是，立即resolve()的 Promise 对象，是在本轮“事件循环”（event loop）的结束时执行，而不是在下一轮“事件循环”的开始时。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>setTimeout(function () {
+  console.log('three');
+}, 0);
+
+Promise.resolve().then(function () {
+  console.log('two');
+});
+
+console.log('one');
+
+// one
+// two
+// three
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>上面代码中，setTimeout(fn, 0)在下一轮“事件循环”开始时执行，Promise.resolve()在本轮“事件循环”结束时执行，console.log('one')则是立即执行，因此最先输出。</p> <h3 id="_10-promise-reject"><a href="#_10-promise-reject" class="header-anchor">#</a> 10. Promise.reject()</h3> <p>Promise.reject()方法的参数，会原封不动地作为reject的理由，变成后续方法的参数。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>Promise.reject('出错了')
+.catch(e =&gt; {
+  console.log(e === '出错了')
+})
+// true
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>上面代码中，Promise.reject()方法的参数是一个字符串，后面catch()方法的参数e就是这个字符串。</p></div></div> <div class="page-slot page-slot-bottom"><!-- 横向自适应 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="6620245489"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/AlienGao/palestInk/edit/master/docs/《ES6 教程》笔记/01.Promise.md" target="_blank" rel="noopener noreferrer">编辑</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="tags"><a href="/palestInk/tags/?tag=%E3%80%8AES6%20%E6%95%99%E7%A8%8B%E3%80%8B%E7%AC%94%E8%AE%B0" title="标签">#《ES6 教程》笔记</a></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2021/08/19, 23:22:41</span></div></div> <div class="page-nav-wapper"><!----> <!----></div></div> <div class="article-list"><div class="article-title"><a href="/palestInk/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/palestInk/pages/50fa4c/"><div>Vue查漏补缺</div></a> <span>08-16</span></dt></dl><dl><dd>02</dd> <dt><a href="/palestInk/pages/c39800/"><div>筛选组件</div></a> <span>08-14</span></dt></dl><dl><dd>03</dd> <dt><a href="/palestInk/pages/4fead5/"><div>DatePicker再封装</div></a> <span>08-14</span></dt></dl> <dl><dd></dd> <dt><a href="/palestInk/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="mailto:18602947794@163.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/AlienGao" title="GitHub" target="_blank" class="iconfont icon-github"></a><a href="https://music.163.com/#/playlist?id=136527094" title="听音乐" target="_blank" class="iconfont icon-erji"></a><a href="http://fetchrss.com/rss/613062592c5fdd6e6e18871261304431c153185fd815c472.xml" title="Rss訂閲" target="_blank" class="iconfont icon-rss"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2021-2021
+    <span>AlienGao | <a href="https://github.com/AlienGao/palestInk" target="_blank">MIT License</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <div class="custom-html-window custom-html-window-rb" style="display:;"><div class="custom-wrapper"><i class="close-but">×</i> <div><!-- 固定160*160px -->
+      <ins class="adsbygoogle"
+          style="display:inline-block;max-width:160px;max-height:160px"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="8377369658"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      </div></div></div></div><div class="global-ui"><APlayer audio="" fixed="true" autoplay="autoplay" theme="#b7daff" loop="loop" order="list" preload="auto" volume="0.7" mutex="true" lrc-type="3" list-max-height="250" storage-name="vuepress-plugin-meting" id="aplayer-fixed"></APlayer><div></div></div></div>
+    <script src="/palestInk/assets/js/app.f3362844.js" defer></script><script src="/palestInk/assets/js/2.1ca628e9.js" defer></script><script src="/palestInk/assets/js/29.c964af7c.js" defer></script>
+  </body>
+</html>

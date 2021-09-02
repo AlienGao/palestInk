@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vue查漏补缺 | AlienGao&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/palestInk/img/favicon.ico">
+    <script data-ad-client="ca-pub-7828333725993554" async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="description" content="web前端技术博客,简洁至上,专注web前端学习与总结。JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github等技术文章。">
+    <meta name="keywords" content="前端博客,个人技术博客,前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github,markdown">
+    <meta name="baidu-site-verification" content="7F55weZDDc">
+    <meta name="theme-color" content="#11a8cd">
+    <link rel="preload" href="/palestInk/assets/css/0.styles.071828ce.css" as="style"><link rel="preload" href="/palestInk/assets/js/app.f3362844.js" as="script"><link rel="preload" href="/palestInk/assets/js/2.1ca628e9.js" as="script"><link rel="preload" href="/palestInk/assets/js/38.66d0f396.js" as="script"><link rel="prefetch" href="/palestInk/assets/js/10.e6a541e8.js"><link rel="prefetch" href="/palestInk/assets/js/11.328b0f28.js"><link rel="prefetch" href="/palestInk/assets/js/12.7f78d282.js"><link rel="prefetch" href="/palestInk/assets/js/13.7a676e32.js"><link rel="prefetch" href="/palestInk/assets/js/14.b816e62b.js"><link rel="prefetch" href="/palestInk/assets/js/15.ea812b2d.js"><link rel="prefetch" href="/palestInk/assets/js/16.4c820ae5.js"><link rel="prefetch" href="/palestInk/assets/js/17.307e08b3.js"><link rel="prefetch" href="/palestInk/assets/js/18.c1f19ffe.js"><link rel="prefetch" href="/palestInk/assets/js/19.c84f87b1.js"><link rel="prefetch" href="/palestInk/assets/js/20.90fc94e2.js"><link rel="prefetch" href="/palestInk/assets/js/21.0226ee00.js"><link rel="prefetch" href="/palestInk/assets/js/22.addb3661.js"><link rel="prefetch" href="/palestInk/assets/js/23.54dbd9f1.js"><link rel="prefetch" href="/palestInk/assets/js/24.c42a12fc.js"><link rel="prefetch" href="/palestInk/assets/js/25.a130255c.js"><link rel="prefetch" href="/palestInk/assets/js/26.ef02f4a9.js"><link rel="prefetch" href="/palestInk/assets/js/27.1c906af2.js"><link rel="prefetch" href="/palestInk/assets/js/28.c08bcd3e.js"><link rel="prefetch" href="/palestInk/assets/js/29.c964af7c.js"><link rel="prefetch" href="/palestInk/assets/js/3.417dca46.js"><link rel="prefetch" href="/palestInk/assets/js/30.d35eb335.js"><link rel="prefetch" href="/palestInk/assets/js/31.ab3a8cda.js"><link rel="prefetch" href="/palestInk/assets/js/32.0ffe1db2.js"><link rel="prefetch" href="/palestInk/assets/js/33.69deffb6.js"><link rel="prefetch" href="/palestInk/assets/js/34.08dc3500.js"><link rel="prefetch" href="/palestInk/assets/js/35.19bbb741.js"><link rel="prefetch" href="/palestInk/assets/js/36.94cbc885.js"><link rel="prefetch" href="/palestInk/assets/js/37.1d6c18d6.js"><link rel="prefetch" href="/palestInk/assets/js/39.cb34c602.js"><link rel="prefetch" href="/palestInk/assets/js/4.78209e41.js"><link rel="prefetch" href="/palestInk/assets/js/40.085dc740.js"><link rel="prefetch" href="/palestInk/assets/js/41.5d9bffc3.js"><link rel="prefetch" href="/palestInk/assets/js/42.07cd0a07.js"><link rel="prefetch" href="/palestInk/assets/js/43.b5e252a7.js"><link rel="prefetch" href="/palestInk/assets/js/44.5435fb04.js"><link rel="prefetch" href="/palestInk/assets/js/45.34b8f085.js"><link rel="prefetch" href="/palestInk/assets/js/46.01ffb945.js"><link rel="prefetch" href="/palestInk/assets/js/5.18288151.js"><link rel="prefetch" href="/palestInk/assets/js/6.b75711ca.js"><link rel="prefetch" href="/palestInk/assets/js/7.31a8df10.js"><link rel="prefetch" href="/palestInk/assets/js/8.740fdc49.js"><link rel="prefetch" href="/palestInk/assets/js/9.0bb8f5a2.js">
+    <link rel="stylesheet" href="/palestInk/assets/css/0.styles.071828ce.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/palestInk/" class="home-link router-link-active"><img src="/palestInk/img/alien.jpeg" alt="AlienGao's blog" class="logo"> <span class="site-name can-hide">AlienGao's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/palestInk/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><a href="/palestInk/web/" class="link-title">前端</a> <span class="title" style="display:none;">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/palestInk/frontend/js/" class="nav-link">JavaScript</a></li><li class="dropdown-item"><!----> <a href="/palestInk/frontend/component/" class="nav-link">Antd组件</a></li><li class="dropdown-item"><h4>学习笔记</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/palestInk/note/es6/" class="nav-link">《ES6 教程》笔记</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法" class="dropdown-title"><a href="/palestInk/leetcode/" class="link-title">算法</a> <span class="title" style="display:none;">算法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/palestInk/leetcode/greed/" class="nav-link">贪心</a></li><li class="dropdown-item"><!----> <a href="/palestInk/leetcode/dfs/" class="nav-link">广度优先/深度优先</a></li><li class="dropdown-item"><!----> <a href="/palestInk/leetcode/bit/" class="nav-link">位运算</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术" class="dropdown-title"><a href="/palestInk/technology/" class="link-title">技术</a> <span class="title" style="display:none;">技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/palestInk/pages/ee319a/" class="nav-link">技术文档</a></li><li class="dropdown-item"><!----> <a href="/palestInk/pages/1e9c2d/" class="nav-link">GitHub技巧</a></li></ul></div></div><div class="nav-item"><a href="/palestInk/interview/" class="nav-link">面试</a></div><div class="nav-item"><a href="/palestInk/pages/beb6c0bd8a66cea6/" class="nav-link">收藏</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/palestInk/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/palestInk/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/palestInk/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/palestInk/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/AlienGao/palestInk" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="https://avatars.githubusercontent.com/u/23427784?v=4"> <div class="blogger-info"><h3>AlienGao</h3> <span></span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/palestInk/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><a href="/palestInk/web/" class="link-title">前端</a> <span class="title" style="display:none;">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/palestInk/frontend/js/" class="nav-link">JavaScript</a></li><li class="dropdown-item"><!----> <a href="/palestInk/frontend/component/" class="nav-link">Antd组件</a></li><li class="dropdown-item"><h4>学习笔记</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/palestInk/note/es6/" class="nav-link">《ES6 教程》笔记</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法" class="dropdown-title"><a href="/palestInk/leetcode/" class="link-title">算法</a> <span class="title" style="display:none;">算法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/palestInk/leetcode/greed/" class="nav-link">贪心</a></li><li class="dropdown-item"><!----> <a href="/palestInk/leetcode/dfs/" class="nav-link">广度优先/深度优先</a></li><li class="dropdown-item"><!----> <a href="/palestInk/leetcode/bit/" class="nav-link">位运算</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术" class="dropdown-title"><a href="/palestInk/technology/" class="link-title">技术</a> <span class="title" style="display:none;">技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/palestInk/pages/ee319a/" class="nav-link">技术文档</a></li><li class="dropdown-item"><!----> <a href="/palestInk/pages/1e9c2d/" class="nav-link">GitHub技巧</a></li></ul></div></div><div class="nav-item"><a href="/palestInk/interview/" class="nav-link">面试</a></div><div class="nav-item"><a href="/palestInk/pages/beb6c0bd8a66cea6/" class="nav-link">收藏</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/palestInk/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/palestInk/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/palestInk/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/palestInk/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/AlienGao/palestInk" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/palestInk/pages/d24c7e/" class="sidebar-link">React和Vue列表中Key的作用</a></li><li><a href="/palestInk/pages/793b14/" class="sidebar-link">谈一谈 nextTick 的原理</a></li><li><a href="/palestInk/pages/61f3ee/" class="sidebar-link">为什么 Vuex 的 mutation 和 Redux 的 reducer 中不能做异步操作？</a></li><li><a href="/palestInk/pages/6aec94/" class="sidebar-link">Vue 的父组件和子组件生命周期钩子执行顺序是什么</a></li><li><a href="/palestInk/pages/ce7abb/" class="sidebar-link">React 中 setState 什么时候是同步的，什么时候是异步的？</a></li><li><a href="/palestInk/pages/50fa4c/" aria-current="page" class="active sidebar-link">Vue查漏补缺</a><ul class="sidebar-sub-headers"></ul></li></ul> <div class="sidebar-slot sidebar-slot-bottom"><!-- 正方形 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="3508773082"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div></aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-1cd794fe><div class="articleInfo" data-v-1cd794fe><ul class="breadcrumbs" data-v-1cd794fe><li data-v-1cd794fe><a href="/palestInk/" title="首页" class="iconfont icon-home router-link-active" data-v-1cd794fe></a></li> <li data-v-1cd794fe><a href="/palestInk/interview/mvvm/" title="框架-目录页" data-v-1cd794fe>框架</a></li> <!----> <!----></ul> <div class="info" data-v-1cd794fe><div title="作者" class="author iconfont icon-touxiang" data-v-1cd794fe><a href="https://github.com/AlienGao" target="_blank" title="作者" class="beLink" data-v-1cd794fe>AlienGao</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-1cd794fe><a href="javascript:;" data-v-1cd794fe>2021-08-16</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABGpJREFUSA3tVVtoXFUU3fvOI53UlmCaKIFmwEhsE7QK0ipFEdHEKpXaZGrp15SINsXUWvBDpBgQRKi0+KKoFeJHfZA+ED9KKoIU2gYD9UejTW4rVIzm0VSTziPzuNu1z507dibTTjL4U/DAzLn3nL3X2o91ziX6f9wMFdh6Jvbm9nNSV0msViVO6tN1Rm7NMu2OpeJ9lWBUTDxrJbYTS0hInuwciu9eLHlFxCLCZEk3MegsJmZ5K/JD6t7FkFdEvGUo1g7qJoG3MHImqRIn8/nzY1K9UPKKiJmtnUqHVE3Gbuay6vJE/N2FEmuxFjW2nUuE0yQXRRxLiTUAzs36zhZvOXJPdX850EVnnLZkB8prodQoM5JGj7Xk2mvC7JB8tG04Ef5PiXtG0UtxupRQSfTnBoCy554x18yJHI6I+G5Eru4LHmPJZEQsrvPUbMiA8G/WgMK7w7I+ez7++o2ANfbrjvaOl1tFMs+htG3IrZH9/hDX1Pr8Tc0UvH8tcX29KzAgIGcEkINyW5BF9x891hw6VYqgJHEk0huccS7vh3C6gTiODL+26huuBtbct8eZnqLML8PkxGYpuPZBqtqwkSjgc4mB5gbgig5i+y0UDK35LMxXisn9xQtK+nd26gTIHsHe/oblK/b29fUmN/8Y+9jAQrnBp56m1LcDlDp9irKTExSKduXJVWSqdBMA08pEJnEIOB3FPPMybu/oeV8zFeYN3xx576Q6RH+VmplE4ncQV5v+5rzSoyOU7PuEAg8g803PwBJ0CExno/jcMbN8tONYeOmHiuUNryvm3fRUy4tMPVLdAGkUhNWuggGrJcXPv+ouCjz0MKUHz1J2/E8IC9nqTabcxgaBYM0hPhD5Y65FsbxRQKxCQrDjDctW7PUM3HuZunFyifSAqEfuzCp48Il24luWUWZoyJCaPR82jE0+kFA643wRFVni4RYSq3ohJO2pZ7B5dO4xkDWbEpossJPLSrPjYID8rS2UHTlvyNxqIGsg674XJJ7vnh5L7PNwC4hh2sjCI96mzszOTpxLF0T7l88Yz7lAuK6OnL8gXLOnTvpzSb22YG8W7us3jSebFHeeqnXRG1vt+MoUM84LQIBmMsCTAcOauTh0T0l0neQK7m2bLMt2mGxU3HYssS0J2cdv5wljlPsrIuZLAG/2DOZIXgCYT8uMGZN+e2kSirfxZOPCsC0f24nTZzspnVn9VePS1Z5vubmAGGXG8ZFno9Hel0yfA5ZPhF7Dh972BQJ2qCpgH67lmWtBYbvk6sz02wjky2vXyz0XErP/kFB619js1BtwfOV4OPRqOQBjy3Qbk18vigUPPSD5ceHnwck7W9bhAqZdd7SuG7w4/P2F/GaJh8c7e9qgow+Q7cGBo+98WsLkuktFqiZabtXuQTu/Y5ETbR0v7tNSFnvrmu6pjdoan2KjMu8q/Hmj1EfCO2ZGfEIbIXKUlw8qaX9/b2oeSJmFksSeT/Fn0V3nSypChh4Gjh74ybO9aeZ/AN2dwciu2/MhAAAAAElFTkSuQmCC">
+          Vue查漏补缺
+        </h1> <div class="page-slot page-slot-top"><!-- 固定100% * 90px可显示，max-height:90px未见显示-->
+     <ins class="adsbygoogle"
+          style="display:inline-block;width:100%;max-height:90px"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="6625304284"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div> <div class="theme-vdoing-content content__default"><h3 id="_1-在哪个生命周期内调用异步请求"><a href="#_1-在哪个生命周期内调用异步请求" class="header-anchor">#</a> 1. 在哪个生命周期内调用异步请求？</h3> <p>可以在钩子函数 created、beforeMount、mounted 中进行调用，因为在这三个钩子函数中，data 已经创建，可以将服务端端返回的数据进行赋值。但是本人推荐在 created 钩子函数中调用异步请求，因为在 created 钩子函数中调用异步请求有以下优点：</p> <ul><li>能更快获取到服务端数据，减少页面 loading 时间；</li> <li>ssr 不支持 beforeMount 、mounted 钩子函数，所以放在 created 中有助于一致性；</li></ul> <h3 id="_2-父组件可以监听到子组件的生命周期吗"><a href="#_2-父组件可以监听到子组件的生命周期吗" class="header-anchor">#</a> 2. 父组件可以监听到子组件的生命周期吗？</h3> <p>比如有父组件 Parent 和子组件 Child，如果父组件监听到子组件挂载 mounted 就做一些逻辑处理，可以通过以下写法实现：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// Parent.vue
+&lt;Child @mounted=&quot;doSomething&quot;/&gt;
+    
+// Child.vue
+mounted() {
+  this.$emit(&quot;mounted&quot;);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>以上需要手动通过 $emit 触发父组件的事件，更简单的方式可以在父组件引用子组件时通过 @hook 来监听即可，如下所示：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>//  Parent.vue
+&lt;Child @hook:mounted=&quot;doSomething&quot; &gt;&lt;/Child&gt;
+
+doSomething() {
+   console.log('父组件监听到 mounted 钩子函数 ...');
+},
+    
+//  Child.vue
+mounted(){
+   console.log('子组件触发 mounted 钩子函数 ...');
+},    
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>// 以上输出顺序为：
+// 子组件触发 mounted 钩子函数 ...
+// 父组件监听到 mounted 钩子函数 ...<br>
+当然 @hook 方法不仅仅是可以监听 mounted，其它的生命周期事件，例如：created，updated 等都可以监听。</p> <h3 id="_3-谈谈你对-keep-alive-的了解"><a href="#_3-谈谈你对-keep-alive-的了解" class="header-anchor">#</a> 3. 谈谈你对 keep-alive 的了解？</h3> <p>keep-alive 是 Vue 内置的一个组件，可以使被包含的组件保留状态，避免重新渲染 ，其有以下特性：</p> <ul><li>一般结合路由和动态组件一起使用，用于缓存组件；</li> <li>提供 include 和 exclude 属性，两者都支持字符串或正则表达式， include 表示只有名称匹配的组件会被缓存，exclude 表示任何名称匹配的组件都不会被缓存 ，其中
+exclude 的优先级比 include 高；</li> <li>对应两个钩子函数 activated 和 deactivated ，当组件被激活时，触发钩子函数 activated，当组件被移除时，触发钩子函数 deactivated。</li></ul> <h3 id="_4-组件中-data-为什么是一个函数"><a href="#_4-组件中-data-为什么是一个函数" class="header-anchor">#</a> 4. 组件中 data 为什么是一个函数？</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>// data
+data() {
+  return {
+	message: &quot;子组件&quot;,
+	childName:this.name
+  }
+}
+
+// new Vue
+new Vue({
+  el: '#app',
+  router,
+  template: '&lt;App/&gt;',
+  components: {App}
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>因为组件是用来复用的，且 JS 里对象是引用关系，如果组件中 data 是一个对象，那么这样作用域没有隔离，子组件中的 data 属性值会相互影响，如果组件中 data 选项是一个函数，那么每个实例可以维护一份被返回对象的独立的拷贝，组件实例之间的 data 属性值不会互相影响；而 new Vue 的实例，是不会被复用的，因此不存在引用对象的问题。</p> <h3 id="_5-v-model-的原理"><a href="#_5-v-model-的原理" class="header-anchor">#</a> 5. v-model 的原理？</h3> <p>我们在 vue 项目中主要使用 v-model 指令在表单 input、textarea、select 等元素上创建双向数据绑定，我们知道 v-model 本质上不过是语法糖，v-model 在内部为不同的输入元素使用不同的属性并抛出不同的事件：</p> <ul><li>text 和 textarea 元素使用 value 属性和 input 事件；</li> <li>checkbox 和 radio 使用 checked 属性和 change 事件；</li> <li>select 字段将 value 作为 prop 并将 change 作为事件。</li></ul> <h3 id="_6-能说下-vue-router-中常用的-hash-和-history-路由模式实现原理吗"><a href="#_6-能说下-vue-router-中常用的-hash-和-history-路由模式实现原理吗" class="header-anchor">#</a> 6. 能说下 vue-router 中常用的 hash 和 history 路由模式实现原理吗？</h3> <p>（1）hash 模式的实现原理</p> <p>早期的前端路由的实现就是基于 location.hash 来实现的。其实现原理很简单，location.hash 的值就是 URL 中 # 后面的内容。比如下面这个网站，它的 location.hash 的值为 '#search'：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>https://www.word.com#search
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>hash  路由模式的实现主要是基于下面几个特性：</p> <ul><li>URL 中 hash 值只是客户端的一种状态，也就是说当向服务器端发出请求时，hash 部分不会被发送；</li> <li>hash 值的改变，都会在浏览器的访问历史中增加一个记录。因此我们能通过浏览器的回退、前进按钮控制hash 的切换；</li> <li>可以通过 a 标签，并设置 href 属性，当用户点击这个标签后，URL 的 hash 值会发生改变；或者使用  JavaScript 来对 loaction.hash 进行赋值，改变 URL 的 hash 值；</li> <li>我们可以使用 hashchange 事件来监听 hash 值的变化，从而对页面进行跳转（渲染）。</li></ul> <p>（2）history 模式的实现原理</p> <p>HTML5 提供了 History API 来实现 URL 的变化。其中做最主要的 API 有以下两个：history.pushState() 和 history.repalceState()。这两个 API 可以在不进行刷新的情况下，操作浏览器的历史纪录。唯一不同的是，前者是新增一个历史记录，后者是直接替换当前的历史记录，如下所示：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>window.history.pushState(null, null, path);
+window.history.replaceState(null, null, path);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>history 路由模式的实现主要基于存在下面几个特性：</p> <ul><li>pushState 和 repalceState 两个 API 来操作实现 URL 的变化 ；</li> <li>我们可以使用 popstate  事件来监听 url 的变化，从而对页面进行跳转（渲染）；</li> <li>history.pushState() 或 history.replaceState() 不会触发 popstate 事件，这时我们需要手动触发页面跳转（渲染）。</li></ul> <h3 id="_7-vue-是如何实现数据双向绑定的"><a href="#_7-vue-是如何实现数据双向绑定的" class="header-anchor">#</a> 7. Vue 是如何实现数据双向绑定的？</h3> <p>Vue 数据双向绑定主要是指：数据变化更新视图，视图变化更新数据，如下图所示：<br> <img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/8/19/16ca75871f2e5f80~tplv-t2oaga2asx-watermark.awebp" alt=""></p> <ul><li>输入框内容变化时，Data 中的数据同步变化。即 View =&gt; Data 的变化。</li> <li>Data 中的数据变化时，文本节点的内容同步变化。即 Data =&gt; View 的变化。</li></ul> <p>其中，View 变化更新 Data ，可以通过事件监听的方式来实现，所以 Vue 的数据双向绑定的工作主要是如何根据 Data 变化更新 View。</p> <p>Vue 主要通过以下 4 个步骤来实现数据双向绑定的：</p> <ul><li>实现一个监听器 Observer：对数据对象进行遍历，包括子属性对象的属性，利用 Object.defineProperty() 对属性都加上 setter 和 getter。这样的话，给这个对象的某个值赋值，就会触发 setter，那么就能监听到了数据变化。</li> <li>实现一个解析器 Compile：解析 Vue 模板指令，将模板中的变量都替换成数据，然后初始化渲染页面视图，并将每个指令对应的节点绑定更新函数，添加监听数据的订阅者，一旦数据有变动，收到通知，调用更新函数进行数据更新。</li> <li>实现一个订阅者 Watcher：Watcher 订阅者是 Observer 和 Compile 之间通信的桥梁 ，主要的任务是订阅 Observer 中的属性值变化的消息，当收到属性值变化的消息时，触发解析器 Compile 中对应的更新函数。</li> <li>实现一个订阅器 Dep：订阅器采用 发布-订阅 设计模式，用来收集订阅者 Watcher，对监听器 Observer 和 订阅者 Watcher 进行统一管理。</li></ul> <h3 id="_8-vue-框架怎么实现对象和数组的监听"><a href="#_8-vue-框架怎么实现对象和数组的监听" class="header-anchor">#</a> 8. Vue 框架怎么实现对象和数组的监听？</h3> <p>Object.defineProperty() 只能对属性进行数据劫持，不能对整个对象进行劫持，同理无法对数组进行劫持，但是我们在使用 Vue 框架中都知道，Vue 能检测到对象和数组（部分方法的操作）的变化，那它是怎么实现的呢？我们查看相关代码如下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>  /**
+   * Observe a list of Array items.
+   */
+  observeArray (items: Array&lt;any&gt;) {
+    for (let i = 0, l = items.length; i &lt; l; i++) {
+      observe(items[i])  // observe 功能为监测数据的变化
+    }
+  }
+
+  /**
+   * 对属性进行递归遍历
+   */
+  let childOb = !shallow &amp;&amp; observe(val) // observe 功能为监测数据的变化
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>通过以上 Vue 源码部分查看，我们就能知道 Vue 框架是通过遍历数组 和递归遍历对象，从而达到利用 Object.defineProperty() 也能对对象和数组（部分方法的操作）进行监听。</p> <h3 id="_9-proxy-与-object-defineproperty-优劣对比"><a href="#_9-proxy-与-object-defineproperty-优劣对比" class="header-anchor">#</a> 9. Proxy 与 Object.defineProperty 优劣对比</h3> <h4 id="proxy-的优势如下"><a href="#proxy-的优势如下" class="header-anchor">#</a> Proxy 的优势如下:</h4> <ul><li>Proxy 可以直接监听对象而非属性；</li> <li>Proxy 可以直接监听数组的变化；</li> <li>Proxy 有多达 13 种拦截方法,不限于 apply、ownKeys、deleteProperty、has 等等是 Object.defineProperty 不具备的；</li> <li>Proxy 返回的是一个新对象,我们可以只操作新的对象达到目的,而 Object.defineProperty 只能遍历对象属性直接修改；</li> <li>Proxy 作为新标准将受到浏览器厂商重点持续的性能优化，也就是传说中的新标准的性能红利；</li></ul> <h4 id="object-defineproperty-的优势如下"><a href="#object-defineproperty-的优势如下" class="header-anchor">#</a> Object.defineProperty 的优势如下:</h4> <p>兼容性好，支持 IE9，而 Proxy 的存在浏览器兼容性问题,而且无法用 polyfill 磨平，因此 Vue 的作者才声明需要等到下个大版本( 3.0 )才能用 Proxy 重写。</p> <h3 id="_10-vue-怎么用-vm-set-解决对象新增属性不能响应的问题"><a href="#_10-vue-怎么用-vm-set-解决对象新增属性不能响应的问题" class="header-anchor">#</a> 10. Vue 怎么用 vm.$set() 解决对象新增属性不能响应的问题 ？</h3> <p>受现代 JavaScript 的限制 ，Vue 无法检测到对象属性的添加或删除。由于 Vue 会在初始化实例时对属性执行 getter/setter 转化，所以属性必须在 data 对象上存在才能让 Vue 将它转换为响应式的。但是 Vue 提供了 Vue.set (object, propertyName, value) / vm.$set (object, propertyName, value)  来实现为对象添加响应式属性，那框架本身是如何实现的呢？<br>
+我们查看对应的 Vue 源码：<em>vue/src/core/instance/index.js</em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>export function set (target: Array&lt;any&gt; | Object, key: any, val: any): any {
+  // target 为数组  
+  if (Array.isArray(target) &amp;&amp; isValidArrayIndex(key)) {
+    // 修改数组的长度, 避免索引&gt;数组长度导致splcie()执行有误
+    target.length = Math.max(target.length, key)
+    // 利用数组的splice变异方法触发响应式  
+    target.splice(key, 1, val)
+    return val
+  }
+  // key 已经存在，直接修改属性值  
+  if (key in target &amp;&amp; !(key in Object.prototype)) {
+    target[key] = val
+    return val
+  }
+  const ob = (target: any).__ob__
+  // target 本身就不是响应式数据, 直接赋值
+  if (!ob) {
+    target[key] = val
+    return val
+  }
+  // 对属性进行响应式处理
+  defineReactive(ob.value, key, val)
+  ob.dep.notify()
+  return val
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><p>我们阅读以上源码可知，vm.$set 的实现原理是：</p> <ul><li><p>如果目标是数组，直接使用数组的 splice 方法触发相应式；</p></li> <li><p>如果目标是对象，会先判读属性是否存在、对象是否是响应式，最终如果要对属性进行响应式处理，则是通过调用<em>defineReactive</em>方法进行响应式处理<em>defineReactive</em>方法就是Vue在初始化对象时，给对象属性采用 Object.defineProperty动态添加getter和setter的功能所调用的方法。</p></li></ul> <h3 id="_11-什么是-mvvm"><a href="#_11-什么是-mvvm" class="header-anchor">#</a> 11. 什么是 MVVM？</h3> <p><img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/8/19/16ca75871ec53fba~tplv-t2oaga2asx-watermark.awebp" alt=""><br>
+（1）View 层<br>
+View 是视图层，也就是用户界面。前端主要由 HTML 和 CSS 来构建 。</p> <p>（2）Model 层<br>
+Model 是指数据模型，泛指后端进行的各种业务逻辑处理和数据操控，对于前端来说就是后端提供的 api 接口。</p> <p>（3）ViewModel 层<br>
+ViewModel 是由前端开发人员组织生成和维护的视图数据层。在这一层，前端开发者对从后端获取的 Model 数据进行转换处理，做二次封装，以生成符合 View 层使用预期的视图数据模型。需要注意的是 ViewModel 所封装出来的数据模型包括视图的状态和行为两部分，而 Model 层的数据模型是只包含状态的，比如页面的这一块展示什么，而页面加载进来时发生什么，点击这一块发生什么，这一块滚动时发生什么这些都属于视图行为（交互），视图状态和行为都封装在了 ViewModel 里。这样的封装使得 ViewModel 可以完整地去描述 View 层。</p> <p>MVVM 框架实现了双向绑定，这样 ViewModel 的内容会实时展现在 View 层，前端开发者再也不必低效又麻烦地通过操纵 DOM 去更新视图，MVVM 框架已经把最脏最累的一块做好了，我们开发者只需要处理和维护 ViewModel，更新数据视图就会自动得到相应更新。这样 View 层展现的不是 Model 层的数据，而是 ViewModel 的数据，由 ViewModel 负责与 Model 层交互，这就完全解耦了 View 层和 Model 层，这个解耦是至关重要的，它是前后端分离方案实施的重要一环。</p> <p>（1）View 层</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;div id=&quot;app&quot;&gt;
+    &lt;p&gt;{{message}}&lt;/p&gt;
+    &lt;button v-on:click=&quot;showMessage()&quot;&gt;Click me&lt;/button&gt;
+&lt;/div&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>（2）ViewModel 层</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>var app = new Vue({
+    el: '#app',
+    data: {  // 用于描述视图状态   
+        message: 'Hello Vue!', 
+    },
+    methods: {  // 用于描述视图行为  
+        showMessage(){
+            let vm = this;
+            alert(vm.message);
+        }
+    },
+    created(){
+        let vm = this;
+        // Ajax 获取 Model 层的数据
+        ajax({
+            url: '/your/server/data/api',
+            success(res){
+                vm.message = res;
+            }
+        });
+    }
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><p>（3） Model 层</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>{
+    &quot;url&quot;: &quot;/your/server/data/api&quot;,
+    &quot;res&quot;: {
+        &quot;success&quot;: true,
+        &quot;name&quot;: &quot;IoveC&quot;,
+        &quot;domain&quot;: &quot;www.cnblogs.com&quot;
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></div></div> <div class="page-slot page-slot-bottom"><!-- 横向自适应 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="6620245489"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/AlienGao/palestInk/edit/master/docs/框架/06.Vue查漏补缺.md" target="_blank" rel="noopener noreferrer">编辑</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="tags"><a href="/palestInk/tags/?tag=%E6%A1%86%E6%9E%B6" title="标签">#框架</a></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2021/08/17, 10:18:38</span></div></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/palestInk/pages/ce7abb/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">React 中 setState 什么时候是同步的，什么时候是异步的？</div></a> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/palestInk/pages/ce7abb/" class="prev">React 中 setState 什么时候是同步的，什么时候是异步的？</a></span> <!----></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/palestInk/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/palestInk/pages/abdd8e/"><div>Promise</div></a> <span>08-18</span></dt></dl><dl><dd>02</dd> <dt><a href="/palestInk/pages/c39800/"><div>筛选组件</div></a> <span>08-14</span></dt></dl><dl><dd>03</dd> <dt><a href="/palestInk/pages/4fead5/"><div>DatePicker再封装</div></a> <span>08-14</span></dt></dl> <dl><dd></dd> <dt><a href="/palestInk/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="mailto:18602947794@163.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/AlienGao" title="GitHub" target="_blank" class="iconfont icon-github"></a><a href="https://music.163.com/#/playlist?id=136527094" title="听音乐" target="_blank" class="iconfont icon-erji"></a><a href="http://fetchrss.com/rss/613062592c5fdd6e6e18871261304431c153185fd815c472.xml" title="Rss訂閲" target="_blank" class="iconfont icon-rss"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2021-2021
+    <span>AlienGao | <a href="https://github.com/AlienGao/palestInk" target="_blank">MIT License</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <div class="custom-html-window custom-html-window-rb" style="display:;"><div class="custom-wrapper"><i class="close-but">×</i> <div><!-- 固定160*160px -->
+      <ins class="adsbygoogle"
+          style="display:inline-block;max-width:160px;max-height:160px"
+          data-ad-client="ca-pub-7828333725993554"
+          data-ad-slot="8377369658"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      </div></div></div></div><div class="global-ui"><APlayer audio="" fixed="true" autoplay="autoplay" theme="#b7daff" loop="loop" order="list" preload="auto" volume="0.7" mutex="true" lrc-type="3" list-max-height="250" storage-name="vuepress-plugin-meting" id="aplayer-fixed"></APlayer><div></div></div></div>
+    <script src="/palestInk/assets/js/app.f3362844.js" defer></script><script src="/palestInk/assets/js/2.1ca628e9.js" defer></script><script src="/palestInk/assets/js/38.66d0f396.js" defer></script>
+  </body>
+</html>
